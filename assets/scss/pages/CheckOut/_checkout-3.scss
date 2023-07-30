@@ -1,0 +1,32 @@
+.Done{
+    .nav{
+        ul{
+            display: none;
+        }
+    }
+    .container{
+        position: relative;
+    }
+    .info{
+        background-image: url("https://fakeimg.pl/625x800/");
+        background-repeat: no-repeat;
+        background-position: top right;
+        // background-size: contain;
+        
+        position: absolute;
+        height: 100vh;
+        top: -77px;
+        right: -85px;
+        left: 0;
+        z-index: -1;
+    }
+    .text{
+        width: 445px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .btn-primary{
+        padding:19px 57px 18px;
+    }
+}

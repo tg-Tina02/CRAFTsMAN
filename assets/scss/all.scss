@@ -1,5 +1,31 @@
-@import './layout/header.scss';
-@import './layout/footer.scss';
 
+// base
+@import "./base/css-reset";
+@import "./base/variable";
+@import "./base/mixins";
+@import "./base/base";
+@import "./base/font";
+@import "./base/space";
 
-@import './pages/index.scss';
+// layout
+@import "./layout/nav";
+@import "./layout/footer";
+
+// components
+@import "./components/btn";
+
+// home
+@import "./pages/home/header";
+@import "./pages/home/content";
+@import "./pages/home/director";
+@import "./pages/home/product";
+
+// Product
+@import "./pages/Product/Product";
+@import "./pages/Product/Product-Show";
+@import "./pages/Product/cart-list";
+
+// CheckOut
+@import "./pages/CheckOut/checkout-1.scss";
+@import "./pages/CheckOut/checkout-2.scss";
+@import "./pages/CheckOut/checkout-3.scss";

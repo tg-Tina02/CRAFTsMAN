@@ -1,0 +1,19 @@
+.index{
+  .nav{
+    color: #fff;
+  }
+  .header{
+    margin-right: -85px;
+    margin-top: -77px;
+    height: 800px;
+    background-image: url("https://fakeimg.pl/620x800/");
+    background-repeat: no-repeat;
+    background-position: right top;
+    .text{
+      width: 39%;
+      position: relative;
+      top: 400px;
+      transform: translateY(-50%);
+    }
+  }
+}

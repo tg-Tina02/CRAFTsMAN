@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Craftsman</title>
+</head>
+
+<body>
+  <%- include('./layout/nav'); -%>
+
+    <%- include('./layout/cart-list'); -%>
+
+
+    <div class="Product-Show container mb-9">
+      <!-- 產品大圖跟資訊 -->
+      <div class="content">
+        <img src="https://fakeimg.pl/730x424/" alt="產品圖-大" class="mb-6">
+        <div class="text d-flex">
+          <p>
+            This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this
+            cup for tea, coffee, dessert, or to place small items as a dish tray.
+          </p>
+          <div class="text-gray">
+            <div>Made in Taiwan</div>
+            <div>8 x 8 x 6 cm</div>
+            <div>Dishwasher and Microwave-safe</div>
+          </div>
+        </div>
+      </div>
+      <!-- 加入購物車區塊 product-add -->
+      <div class="product-add">
+        <div class="text-gray mb-2">Home / Product / Cup</div>
+        <h2 class="text-xxl fw-bold mb-2">Tatami Cup</h2>
+        <div class="price mb-3">
+          <del class="text-gray-light">NT$1,200</del>
+          <div class="text-l fw-bold">NT$1,080</div>
+        </div>
+        <div class="btn-group">
+          <div class="Num d-flex">
+            <span class="material-symbols-outlined">
+              remove
+            </span>
+            <span>1</span>
+            <span class="material-symbols-outlined">
+              add
+            </span>
+          </div>
+          <a href="javacript:;" class="btn-primary">Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 相關產品推薦 -->
+    <div class="container mb-9">
+      <h2 class="text-xl fw-bold mb-3">You might also like…</h2>
+      <ul class="recommend-list">
+        <li class="list-item">
+          <a href="javacript:;">
+            <img src="https://fakeimg.pl/350/" alt="產品圖1" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Baifan Bowl</div>
+              <div class="price">NT$1,800<del class="text-gray-light">NT$1,980</del></div>
+            </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="javacript:;">
+            <img src="https://fakeimg.pl/350/" alt="產品圖2" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Kabi Mug</div>
+              <div class="price">NT$980</div>
+            </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="javacript:;">
+            <img src="https://fakeimg.pl/350/" alt="產品圖3" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Limdae Cup</div>
+              <div class="price">NT$2,400</div>
+            </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="javacript:;">
+            <img src="https://fakeimg.pl/350/" alt="產品圖4" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Couple Collection</div>
+              <div class="price">NT$2,800</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+      <script>
+        $(document).ready(function () {
+          
+          // 先把全部購物車隱藏
+          $('.Cart').hide();
+          // 點按鈕會出現
+          $('#cart-icon,.product-add .btn-primary').click(function(event){
+            $('.Cart').toggle(100);
+          });
+          // 點叉叉又會隱藏
+          $('.btn-close').click(function(event){
+            $('.Cart').hide(100);
+          });
+
+
+          // 刪除購物車的商品
+          $('.list-item:nth-child(1) .btn-del').click(function(event){
+            $('.list-item:nth-child(1)').hide(100);
+          });
+          $('.list-item:nth-child(2) .btn-del').click(function(event){
+            $('.list-item:nth-child(2)').hide(100);
+          });
+
+
+        });
+      </script>
+</body>
+
+</html>

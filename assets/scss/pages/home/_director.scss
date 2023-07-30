@@ -1,0 +1,28 @@
+.index{
+  .director{
+    background-image: url("https://fakeimg.pl/1280x400/3C3C3C/?retina=1&text=背景圖&font=noto");
+    background-size: contain;
+    background-position: center;
+    // background-repeat: no-repeat;
+    height: 400px;
+
+    .container{
+      height: 100%;
+    }
+
+    .word{
+      width: 350px;
+      align-items: center;
+    }
+
+    .info{
+      width: 183px;
+      justify-content: space-between;
+    }
+    .link{
+      li{
+        margin-right: 23px;
+      }
+    }
+  }
+}

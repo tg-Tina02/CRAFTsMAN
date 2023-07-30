@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craftsman</title>
+  </head>
+  <body>
+    <div class="Product">
+      <%- include('./layout/nav'); -%>
+    </div>
+
+    <div class="product-nav text-l text-gray">
+      <ul class="product-nav-list container">
+        <li><a href="javacript:;" class="active">ALL<sup>24</sup></a></li>
+        <li><a href="javacript:;">BOWL<sup>10</sup></a></li>
+        <li><a href="javacript:;">CUP<sup>8</sup></a></li>
+        <li><a href="javacript:;">PLATE<sup>3</sup></a></li>
+        <li><a href="javacript:;">VASE<sup>3</sup></a></li>
+      </ul>
+    </div>
+
+    <ul class="Product-list container mb-9">
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350/" alt="產品圖1" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Tatami Cup</div>
+              <div class="price">NT$1,080<del class="text-gray-light">NT$1,200</del></div>
+            </div>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350x240/" alt="產品圖2" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Limdae Cup</div>
+              <div class="price">NT$2,400</div>
+            </div>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350x480/" alt="產品圖3" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Kabi Mug</div>
+              <div class="price">NT$980</div>
+            </div>
+        </a>
+      </li>
+      <!-- 第二排 -->
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350x480/" alt="產品圖4" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Hana Vase</div>
+              <div class="price">NT$3,600<del class="text-gray-light">NT$3,880</del></div>
+            </div>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350/" alt="產品圖5" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Sumo Vase</div>
+              <div class="price">NT$4,800</div>
+            </div>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350x240/" alt="產品圖6" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Shiro Plate</div>
+              <div class="price">NT$1,200</div>
+            </div>
+        </a>
+      </li>
+      <!-- 第三排 -->
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350x240/" alt="產品圖7" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Baifan Bowl</div>
+              <div class="price">NT$1,800<del class="text-gray-light">NT$1,980</del></div>
+            </div>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350x480/" alt="產品圖8" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Ceramic Vase</div>
+              <div class="price">NT$3,600</div>
+            </div>
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="Product-Show.html">
+          <img src="https://fakeimg.pl/350/" alt="產品圖9" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Couple Collection</div>
+              <div class="price">NT$2,800</div>
+            </div>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="pagination text-l">
+      <li><a href="javacript:;" class="active">1</a></li>
+      <li><a href="javacript:;">2</a></li>
+      <li><a href="javacript:;">3</a></li>
+    </ul>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

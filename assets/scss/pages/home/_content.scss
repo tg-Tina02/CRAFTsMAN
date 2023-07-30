@@ -1,0 +1,17 @@
+.index{
+  .content{
+    padding: 72px 0;
+    li{
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    img{
+      display: block;
+    }
+    .text{
+      width: 32%;
+      margin: auto;
+    }
+  }
+}

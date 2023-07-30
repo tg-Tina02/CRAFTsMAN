@@ -1,0 +1,21 @@
+
+.nav{
+  background: #FFFFFF00;
+  padding: 24px 85px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul{
+    display: flex;
+    gap: 48px;
+  }
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+    }
+}

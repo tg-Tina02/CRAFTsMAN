@@ -1,0 +1,49 @@
+
+// 文字尺寸
+.text-sm{
+    font-size: 14px;
+}
+.text-20{
+    font-size: 20px;
+    line-height: 24px;
+}
+.text-l{
+    font-size: 24px;
+}
+.text-xl{
+    font-size: 32px;
+}
+.text-xxl{
+    font-size: 48px;
+}
+
+
+// 文字顏色
+.text-white{
+    color: #fff;
+}
+.text-white-light{
+    color: #ffffff99;
+}
+.text-black{
+    color: $Black;
+}
+.text-gray{
+    color: $gray;
+}
+.text-gray-light{
+    color: $gray-light;
+}
+.text-primary{
+    color: $primary;
+}
+
+// 字靠右
+.text-right{
+    text-align: right;
+}
+
+// 字重
+.fw-bold{
+    font-weight: bold;
+}

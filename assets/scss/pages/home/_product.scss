@@ -1,0 +1,19 @@
+.index{
+  .product{
+    padding: 72px 0;
+    .product-list{
+      background: orange;
+      margin-right: -85px;
+      display: flex;
+      gap: 30px;
+
+      overflow: hidden;
+    }
+    .list-item{
+      flex-shrink: 0;
+    }
+    del{
+      margin-left: 8px;
+    }
+  }
+}

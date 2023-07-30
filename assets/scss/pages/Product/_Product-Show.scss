@@ -1,0 +1,61 @@
+.Product-Show{
+    position: relative;
+    .content{
+        width: 730px;
+        .text{
+            gap: 30px;
+        }
+        p{
+            font-size: 20px;
+            width: 60%;
+        }
+    }
+    .product-add{
+        position: absolute;
+        right: 0;
+        top: 212px;
+        transform: translateY(-50%);
+        background: #fff;
+        border-radius: 2px;
+        padding: 32px;
+        padding-right: 0;
+        width: 445px;
+
+        .price{
+            text-align: right;
+        }
+        .Num{
+            background: $gray-white;
+            border-radius: 4px;
+            span{
+                display: block;
+                padding: 19px 16px;
+    
+                &:first-of-type:hover, 
+                &:last-of-type:hover {
+                    cursor: pointer;
+                    background: #d9d8d8;
+                }
+            }
+        }
+    }
+    .btn-group{
+        display: flex;
+        gap: 8px;
+    }
+    
+    .btn-primary{
+        flex-grow: 1;
+    }
+}
+
+.recommend-list{
+    display: flex;
+    gap: 30px;
+    margin-right: -85px;
+    overflow: hidden;
+    background: orange;
+    .list-item{
+        flex-shrink: 0;
+    }
+}

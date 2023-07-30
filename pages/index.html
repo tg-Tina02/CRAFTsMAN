@@ -4,13 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>Craftsman</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <div class="index">
+    
+      <%- include('./layout/nav'); -%>
+    
+      <div class="container">
+        <!-- header -->
+        <div class="header">
+          <div class="text">
+            <h2 class="text-xxl fw-bold mb-3">
+              Enjoy Your Minimalist Lifestyle.
+            </h2>
+            <p class="text-l text-gray mb-6">
+              The best crafts in Taiwan. Get your free shipping on the first order.
+            </p>
+            <a href="Product.html" class="btn-primary">Shop now</a>
+          </div>
+        </div>
 
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
+        <!-- content -->
+        <ul class="content">
+          <li class="mb-4">
+            <img src="https://fakeimg.pl/540x400/" alt="圖片1">
+            <div class="text">
+              <h3 class="text-l fw-bold mb-2">Special Clays</h3>
+              <p class="text-gray mb-3">
+                A general body formulation for contemporary earthenware is 25% kaolin, 25% ball clay, 35% quartz and 15% feldspar.
+              </p>
+              <a href="javascript:;" class="text-primary fw-bold">Learn more</a>
+            </div>
+          </li>
+          <li class="mb-4 text-right">
+            <div class="text">
+              <h3 class="text-l fw-bold mb-2">Special Clays</h3>
+              <p class="text-gray mb-3">
+                A general body formulation for contemporary earthenware is 25% kaolin, 25% ball clay, 35% quartz and 15% feldspar.
+              </p>
+              <a href="javascript:;" class="text-primary fw-bold">Learn more</a>
+            </div>
+            <img src="https://fakeimg.pl/540x400/" alt="圖片2">
+          </li>
+          <li>
+            <img src="https://fakeimg.pl/540x400/" alt="圖片1">
+            <div class="text">
+              <h3 class="text-l fw-bold mb-2">Special Clays</h3>
+              <p class="text-gray mb-3">
+                A general body formulation for contemporary earthenware is 25% kaolin, 25% ball clay, 35% quartz and 15% feldspar.
+              </p>
+              <a href="javascript:;" class="text-primary fw-bold">Learn more</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Art Director -->
+      <div class="director">
+        <div class="container d-flex justify-between align-center">
+          <h2 class="text-xl fw-bold text-white word">
+            “I want to make the life more simple by crafts.”
+          </h2>
+          <div class="info">
+            <h3 class="text-white-light mb-1-sm">Art Director</h3>
+            <div class="name mb-2 text-white">Hsiao-Ming Chen</div>
+            <ul class="link text-primary fw-bold text-sm d-flex">
+              <li><a href="javascript:;">Instagram</a></li>
+              <li><a href="javascript:;">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- product -->
+      <div class="product container">
+        <ul class="product-list">
+          <li class="list-item">
+            <img src="https://fakeimg.pl/350/" alt="產品圖1" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Tatami Cup</div>
+              <div class="price">NT$1,080<del class="text-gray-light">NT$1,200</del></div>
+            </div>
+          </li>
+          <li class="list-item">
+            <img src="https://fakeimg.pl/350/" alt="產品圖2" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Couple Collection</div>
+              <div class="price">NT$2,800</div>
+            </div>
+          </li>
+          <li class="list-item">
+            <img src="https://fakeimg.pl/350/" alt="產品圖3" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Brotherhood Vase</div>
+              <div class="price">NT$4,800</div>
+            </div>
+          </li>
+          <li class="list-item">
+            <img src="https://fakeimg.pl/350/" alt="產品圖4" class="mb-1">
+            <div class="info">
+              <div class="text-l fw-bold mb-1-sm">Baifan Bowl</div>
+              <div class="price">NT$1,800</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <%- include('./layout/footer'); -%>
 
