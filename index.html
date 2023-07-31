@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Craftsman</title>
-    <script type="module" crossorigin src="/CRAFTsMAN/assets/main-3f035bb2.js"></script>
-    <link rel="stylesheet" href="/CRAFTsMAN/assets/main-2f6fd7af.css">
+    <script type="module" crossorigin src="/CRAFTsMAN/assets/main-b7bbf00e.js"></script>
+    <link rel="stylesheet" href="/CRAFTsMAN/assets/main-e860ce69.css">
   </head>
   <body>
     <div class="index">
@@ -14,27 +14,106 @@
       
 <nav class="nav">
     <div class="container">
+        <!-- 手機版下拉選單 -->
+        <div class="menu-sm">
+            <a href="javascript:;" class="ham-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            <div class="full-menu">
+                <div class="d-flex justify-between mb-4">
+                    <a href="javadcript:;" class="arrow-back">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                            </span>
+                    </a>
+                    <a href="CheckOut-1.html">
+                        <span class="material-symbols-outlined" id="cart-icon">
+                        shopping_cart
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-group">
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Product</span>
+                            <span class="material-symbols-outlined arrow-turn">
+                                expand_more
+                                </span>
+                        </a>
+                        <ul class="text-gray">
+                            <li class="mb-2">
+                                <a href="Product.html">ALL<sub>24</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">BOWL<sub>10</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">CUP<sub>8</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">PLATE<sub>3</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">VASE<sub>3</sub></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- logo -->
         <a href="index.html" class="logo">
             <h1>Craftsman</h1>
         </a>
-        <ul>
+        <ul class="menu-l">
             <li><a href="Product.html">Product</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="javascript:;"><span class="material-symbols-outlined" id="cart-icon">
+            <li><a href="CheckOut-1.html"><span class="material-symbols-outlined" id="cart-icon">
                 shopping_cart
                 </span></a></li>
         </ul>
     </div>
-</nav>    
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.full-menu').hide();
+        $('.ham-icon ,.arrow-back').click(function(event){
+            $('.full-menu').toggle();
+        });
+
+        $('.drop-down-menu > ul').hide();
+        $('.drop-down-menu > a').click(function(event){
+            $('.arrow-turn').toggleClass('active');
+            $('.drop-down-menu > ul').slideToggle(800);
+        });
+
+    });
+</script>    
       <div class="container">
         <!-- header -->
         <div class="header">
-          <div class="text">
-            <h2 class="text-xxl fw-bold mb-3">
+          <div class="text text-Mob-center">
+            <h2 class="text-xxl fw-bold mb-3 text-Mob-white">
               Enjoy Your Minimalist Lifestyle.
             </h2>
-            <p class="text-l text-gray mb-6">
+            <p class="text-l text-gray mb-6 text-Mob-16 text-Mob-white-light">
               The best crafts in Taiwan. Get your free shipping on the first order.
             </p>
             <a href="Product.html" class="btn-primary">Shop now</a>
@@ -53,7 +132,8 @@
               <a href="javascript:;" class="text-primary fw-bold">Learn more</a>
             </div>
           </li>
-          <li class="mb-4 text-right">
+          <li class="mb-4 text-right text-Mob-left">
+            <img src="https://fakeimg.pl/540x400/" alt="圖片2">
             <div class="text">
               <h3 class="text-l fw-bold mb-2">Special Clays</h3>
               <p class="text-gray mb-3">
@@ -61,7 +141,6 @@
               </p>
               <a href="javascript:;" class="text-primary fw-bold">Learn more</a>
             </div>
-            <img src="https://fakeimg.pl/540x400/" alt="圖片2">
           </li>
           <li>
             <img src="https://fakeimg.pl/540x400/" alt="圖片1">
@@ -82,12 +161,13 @@
           <h2 class="text-xl fw-bold text-white word">
             “I want to make the life more simple by crafts.”
           </h2>
+
           <div class="info">
             <h3 class="text-white-light mb-1-sm">Art Director</h3>
-            <div class="name mb-2 text-white">Hsiao-Ming Chen</div>
+            <div class="text-l text-white mb-2">Hsiao-Ming Chen</div>
             <ul class="link text-primary fw-bold text-sm d-flex">
-              <li><a href="javascript:;">Instagram</a></li>
-              <li><a href="javascript:;">Twitter</a></li>
+              <li class="text-sm"><a href="javascript:;">Instagram</a></li>
+              <li class="text-sm"><a href="javascript:;">Twitter</a></li>
             </ul>
           </div>
         </div>
@@ -131,7 +211,7 @@
     <footer class="footer">
     <div class="container">
         <div class="Subscribe">
-            <div class="text-xxl fw-bold text-white mb-6">Subscribe for news and special offers!</div>
+            <div class="text-xxl fw-bold text-white mb-6 mb-Mob-3 text-Mob-xl">Subscribe for news and special offers!</div>
             <div class="d-flex">
                 <input type="email" placeholder="Your email address">
                 <input type="submit" name="submit" value="Subscribe" class="btn-primary">

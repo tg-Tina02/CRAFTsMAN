@@ -6,35 +6,114 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Craftsman</title>
-  <script type="module" crossorigin src="/CRAFTsMAN/assets/main-3f035bb2.js"></script>
-  <link rel="stylesheet" href="/CRAFTsMAN/assets/main-2f6fd7af.css">
+  <script type="module" crossorigin src="/CRAFTsMAN/assets/main-b7bbf00e.js"></script>
+  <link rel="stylesheet" href="/CRAFTsMAN/assets/main-e860ce69.css">
 </head>
 
 <body>
   
 <nav class="nav">
     <div class="container">
+        <!-- 手機版下拉選單 -->
+        <div class="menu-sm">
+            <a href="javascript:;" class="ham-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            <div class="full-menu">
+                <div class="d-flex justify-between mb-4">
+                    <a href="javadcript:;" class="arrow-back">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                            </span>
+                    </a>
+                    <a href="CheckOut-1.html">
+                        <span class="material-symbols-outlined" id="cart-icon">
+                        shopping_cart
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-group">
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Product</span>
+                            <span class="material-symbols-outlined arrow-turn">
+                                expand_more
+                                </span>
+                        </a>
+                        <ul class="text-gray">
+                            <li class="mb-2">
+                                <a href="Product.html">ALL<sub>24</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">BOWL<sub>10</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">CUP<sub>8</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">PLATE<sub>3</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">VASE<sub>3</sub></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- logo -->
         <a href="index.html" class="logo">
             <h1>Craftsman</h1>
         </a>
-        <ul>
+        <ul class="menu-l">
             <li><a href="Product.html">Product</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="javascript:;"><span class="material-symbols-outlined" id="cart-icon">
+            <li><a href="CheckOut-1.html"><span class="material-symbols-outlined" id="cart-icon">
                 shopping_cart
                 </span></a></li>
         </ul>
     </div>
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.full-menu').hide();
+        $('.ham-icon ,.arrow-back').click(function(event){
+            $('.full-menu').toggle();
+        });
+
+        $('.drop-down-menu > ul').hide();
+        $('.drop-down-menu > a').click(function(event){
+            $('.arrow-turn').toggleClass('active');
+            $('.drop-down-menu > ul').slideToggle(800);
+        });
+
+    });
+</script>
     <div class="Cart">
 
     <div class="bg-cover"></div>
     <div class="cart-aside">
         <div class="wrap">
             <div class="d-flex justify-between">
-                <h2 class="text-xxl fw-bold mb-3">Cart List<sub class="text-primary text-l">3</sub></h2>
-                <span class="material-symbols-outlined text-xxl btn-close">
+                <h2 class="text-xxl fw-bold mb-3 text-Mob-l mb-Mob-2">Cart List<sub class="text-primary text-l text-Mob-sm">3</sub></h2>
+                <span class="material-symbols-outlined text-xxl btn-close text-Mob-l">
                     close
                     </span>
             </div>
@@ -115,11 +194,11 @@
 
 </div>
 
-    <div class="Product-Show container mb-9">
+    <div class="Product-Show container mb-9 mb-Mob-6">
       <!-- 產品大圖跟資訊 -->
       <div class="content">
         <img src="https://fakeimg.pl/730x424/" alt="產品圖-大" class="mb-6">
-        <div class="text d-flex">
+        <div class="text">
           <p>
             This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this
             cup for tea, coffee, dessert, or to place small items as a dish tray.
@@ -133,14 +212,14 @@
       </div>
       <!-- 加入購物車區塊 product-add -->
       <div class="product-add">
-        <div class="text-gray mb-2">Home / Product / Cup</div>
-        <h2 class="text-xxl fw-bold mb-2">Tatami Cup</h2>
-        <div class="price mb-3">
+        <div class="text-gray mb-2 mb-Mob-1">Home / Product / Cup</div>
+        <h2 class="text-xxl fw-bold mb-2 mb-Mob-2 text-Mob-xl">Tatami Cup</h2>
+        <div class="text-right mb-3 price">
           <del class="text-gray-light">NT$1,200</del>
           <div class="text-l fw-bold">NT$1,080</div>
         </div>
         <div class="btn-group">
-          <div class="Num d-flex">
+          <div class="Num d-flex mb-Mob-2">
             <span class="material-symbols-outlined">
               remove
             </span>
@@ -155,8 +234,8 @@
     </div>
 
     <!-- 相關產品推薦 -->
-    <div class="container mb-9">
-      <h2 class="text-xl fw-bold mb-3">You might also like…</h2>
+    <div class="container mb-9 mb-Mob-6">
+      <h2 class="text-xl fw-bold mb-3 mb-Mob-2">You might also like…</h2>
       <ul class="recommend-list">
         <li class="list-item">
           <a href="javacript:;">
@@ -201,7 +280,7 @@
     <footer class="footer">
     <div class="container">
         <div class="Subscribe">
-            <div class="text-xxl fw-bold text-white mb-6">Subscribe for news and special offers!</div>
+            <div class="text-xxl fw-bold text-white mb-6 mb-Mob-3 text-Mob-xl">Subscribe for news and special offers!</div>
             <div class="d-flex">
                 <input type="email" placeholder="Your email address">
                 <input type="submit" name="submit" value="Subscribe" class="btn-primary">

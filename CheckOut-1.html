@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Craftsman</title>
-  <script type="module" crossorigin src="/CRAFTsMAN/assets/main-3f035bb2.js"></script>
-  <link rel="stylesheet" href="/CRAFTsMAN/assets/main-2f6fd7af.css">
+  <script type="module" crossorigin src="/CRAFTsMAN/assets/main-b7bbf00e.js"></script>
+  <link rel="stylesheet" href="/CRAFTsMAN/assets/main-e860ce69.css">
 </head>
 
 <body>
@@ -15,25 +15,104 @@
     
 <nav class="nav">
     <div class="container">
+        <!-- 手機版下拉選單 -->
+        <div class="menu-sm">
+            <a href="javascript:;" class="ham-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            <div class="full-menu">
+                <div class="d-flex justify-between mb-4">
+                    <a href="javadcript:;" class="arrow-back">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                            </span>
+                    </a>
+                    <a href="CheckOut-1.html">
+                        <span class="material-symbols-outlined" id="cart-icon">
+                        shopping_cart
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-group">
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Product</span>
+                            <span class="material-symbols-outlined arrow-turn">
+                                expand_more
+                                </span>
+                        </a>
+                        <ul class="text-gray">
+                            <li class="mb-2">
+                                <a href="Product.html">ALL<sub>24</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">BOWL<sub>10</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">CUP<sub>8</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">PLATE<sub>3</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">VASE<sub>3</sub></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- logo -->
         <a href="index.html" class="logo">
             <h1>Craftsman</h1>
         </a>
-        <ul>
+        <ul class="menu-l">
             <li><a href="Product.html">Product</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="javascript:;"><span class="material-symbols-outlined" id="cart-icon">
+            <li><a href="CheckOut-1.html"><span class="material-symbols-outlined" id="cart-icon">
                 shopping_cart
                 </span></a></li>
         </ul>
     </div>
 </nav>
-    <!-- Cart > Information > Payment -->
-    <div class="check-out-nav container mb-4">
-      <span class="text-primary">Cart</span> > <span class="fw-bold">Information</span> > <span class="text-gray">Payment</span>
-    </div>
 
-    <div class="container d-flex justify-between gap-30">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.full-menu').hide();
+        $('.ham-icon ,.arrow-back').click(function(event){
+            $('.full-menu').toggle();
+        });
+
+        $('.drop-down-menu > ul').hide();
+        $('.drop-down-menu > a').click(function(event){
+            $('.arrow-turn').toggleClass('active');
+            $('.drop-down-menu > ul').slideToggle(800);
+        });
+
+    });
+</script>
+    <div class="container">
+      <!-- Cart > Information > Payment -->
+      <div class="check-out-nav mb-4 mb-Mob-3">
+        <span class="text-primary">Cart</span> > <span class="fw-bold">Information</span> > <span class="text-gray">Payment</span>
+      </div>
+
       <!-- 表格區（左） -->
       <div class="form">
         <form>
@@ -48,19 +127,19 @@
   
           <label class="address">
             <p class="text-20 mb-1">Shipping address</p>
-            <div class="d-flex gap-8 mb-1">
-              <input id="name" type="text" placeholder="Name" title="請輸入姓名" class="w-50">
-              <input id="tel" type="tel" placeholder="Phone" title="請輸入手機號碼" class="w-50">
+            <div class="d-flex gap-8 mb-1 flex-Mob-wrap">
+              <input id="name" type="text" placeholder="Name" title="請輸入姓名" class="w-50 w-Mob-100">
+              <input id="tel" type="tel" placeholder="Phone" title="請輸入手機號碼" class="w-50 w-Mob-100">
             </div>
-            <div class="d-flex gap-8 mb-1">
-              <select name="Country" class="w-50">
+            <div class="d-flex gap-8 mb-1 flex-Mob-wrap">
+              <select name="Country" class="w-50 w-Mob-100">
                 <option disabled selected>Country/Region</option>
                 <option value="country1">country1</option>
                 <option value="country2">country2</option>
                 <option value="country3">country3</option>
                 <option value="country4">country4</option>
               </select>
-              <select name="City" class="w-50">
+              <select name="City" class="w-50 w-Mob-100">
                 <option disabled selected>City</option>
                 <option value="city1">city1</option>
                 <option value="city2">city2</option>
@@ -68,12 +147,12 @@
                 <option value="city4">city4</option>
               </select>
             </div>
-            <input type="text" placeholder="Address" title="請輸入地址" class="w-100 mb-4">
+            <input type="text" placeholder="Address" title="請輸入地址" class="w-100 mb-4 mb-Mob-3">
           </label>
 
           <!-- 上下頁 按鈕 -->
-          <div class="d-flex justify-between align-center mb-4">
-            <a href="Product-Show.html" class="text-primary back"><span class="material-symbols-outlined">
+          <div class="d-flex justify-between align-center mb-4 mb-Mob-3 flex-Mob-wrap">
+            <a href="Product-Show.html" class="text-primary back w-Mob-100"><span class="material-symbols-outlined">
               arrow_back_ios_new
               </span>Return to cart</a>
             <a href="CheckOut-2.html" class="btn-primary">Continue to payment</a>
@@ -88,48 +167,64 @@
         </ul>
       </div>
 
-      <!-- 右 -->
-      <div class="total-Price-aside">
-        <ul>
-          <li class="d-flex justify-between align-center mb-2">
-            <div class="d-flex align-center">
-              <img src="https://fakeimg.pl/48/" alt="產品圖1">
-              <div><span class="fw-bold">Tatami Cup</span> ×1</div>
-            </div>
-            <div>NT$1,080</div>
-          </li>
-          <li class="d-flex justify-between align-center mb-2">
-            <div class="d-flex align-center">
-              <img src="https://fakeimg.pl/48/" alt="產品圖1">
-              <div><span class="fw-bold">Baifan Bowl</span> ×2</div>
-            </div>
-            <div>NT$3,600</div>
-          </li>
-        </ul>
-
-        <ul class="subtotal">
-          <li class="d-flex justify-between mb-2"><span>Subtotal</span><span>NT$4,680</span></li>
-          <li class="d-flex justify-between"><span>Shipping</span><span>NT$80</span></li>
-        </ul>
-
-        <div class="total text-l fw-bold d-flex justify-between">
-          <span>Total</span><span>NT$4,760</span>
+      <!-- 右 購物車 -->
+      <div class="total-Price-aside mb-Mob-3">
+        <!-- 手機版才會出現的按鈕 -->
+        <a href="javascript:;" class="cart-drop-down-btn">
+          <span>Order Summary</span>
+          <span class="material-symbols-outlined text-primary">
+            expand_more
+            </span>
+        </a>
+        <!-- 手機版才會變成下拉選單 -->
+        <div class="cart-drop-down">
+          <ul>
+            <li class="d-flex justify-between align-center mb-2 mb-Mob-1">
+              <div class="d-flex align-center">
+                <img src="https://fakeimg.pl/48/" alt="產品圖1">
+                <div><span class="fw-bold">Tatami Cup</span> ×1</div>
+              </div>
+              <div>NT$1,080</div>
+            </li>
+            <li class="d-flex justify-between align-center mb-2 mb-Mob-1">
+              <div class="d-flex align-center">
+                <img src="https://fakeimg.pl/48/" alt="產品圖1">
+                <div><span class="fw-bold">Baifan Bowl</span> ×2</div>
+              </div>
+              <div>NT$3,600</div>
+            </li>
+          </ul>
+  
+          <ul class="subtotal">
+            <li class="d-flex justify-between mb-2 mb-Mob-1"><span>Subtotal</span><span>NT$4,680</span></li>
+            <li class="d-flex justify-between"><span>Shipping</span><span>NT$80</span></li>
+          </ul>
+          
+          <div class="total text-l fw-bold d-flex justify-between">
+            <span>Total</span><span>NT$4,760</span>
+          </div>
         </div>
-
       </div>
 
     </div>
+
 
   </div>
 
 
       
 
-      <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
       <script>
-        
-      </script>
+        $(document).ready(function() {
+    
+            // $('.cart-drop-down').hide();
+            $('.cart-drop-down-btn').click(function(event){
+                $('.cart-drop-down').toggle(400);
+                $('.cart-drop-down-btn > .material-symbols-outlined').toggleClass('active');
+            });
+    
+        });
+    </script>
 </body>
 
 </html>

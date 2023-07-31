@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Craftsman</title>
-  <script type="module" crossorigin src="/CRAFTsMAN/assets/main-3f035bb2.js"></script>
-  <link rel="stylesheet" href="/CRAFTsMAN/assets/main-2f6fd7af.css">
+  <script type="module" crossorigin src="/CRAFTsMAN/assets/main-b7bbf00e.js"></script>
+  <link rel="stylesheet" href="/CRAFTsMAN/assets/main-e860ce69.css">
 </head>
 
 <body>
@@ -15,23 +15,102 @@
     
 <nav class="nav">
     <div class="container">
+        <!-- 手機版下拉選單 -->
+        <div class="menu-sm">
+            <a href="javascript:;" class="ham-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            <div class="full-menu">
+                <div class="d-flex justify-between mb-4">
+                    <a href="javadcript:;" class="arrow-back">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                            </span>
+                    </a>
+                    <a href="CheckOut-1.html">
+                        <span class="material-symbols-outlined" id="cart-icon">
+                        shopping_cart
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-group">
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Product</span>
+                            <span class="material-symbols-outlined arrow-turn">
+                                expand_more
+                                </span>
+                        </a>
+                        <ul class="text-gray">
+                            <li class="mb-2">
+                                <a href="Product.html">ALL<sub>24</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">BOWL<sub>10</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">CUP<sub>8</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">PLATE<sub>3</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">VASE<sub>3</sub></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- logo -->
         <a href="index.html" class="logo">
             <h1>Craftsman</h1>
         </a>
-        <ul>
+        <ul class="menu-l">
             <li><a href="Product.html">Product</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="javascript:;"><span class="material-symbols-outlined" id="cart-icon">
+            <li><a href="CheckOut-1.html"><span class="material-symbols-outlined" id="cart-icon">
                 shopping_cart
                 </span></a></li>
         </ul>
     </div>
-</nav>    <div class="container">
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.full-menu').hide();
+        $('.ham-icon ,.arrow-back').click(function(event){
+            $('.full-menu').toggle();
+        });
+
+        $('.drop-down-menu > ul').hide();
+        $('.drop-down-menu > a').click(function(event){
+            $('.arrow-turn').toggleClass('active');
+            $('.drop-down-menu > ul').slideToggle(800);
+        });
+
+    });
+</script>    <div class="container">
         <div class="info">
-          <div class="text">
-            <h2 class="text-xxl mb-3">Well Done!</h2>
-            <p class="text-gray text-l mb-6">
+          <div class="text text-Mob-center">
+            <h2 class="text-xxl mb-3 fw-bold text-Mob-white text-Mob-xxl">Well Done!</h2>
+            <p class="text-gray text-l mb-6 text-Mob-white-light text-Mob-16">
               Your order has been received. We’II email you an order confirmation with details.
             </p>
             <a href="Product.html" class="btn-primary">Continue shopping</a>

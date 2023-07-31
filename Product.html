@@ -5,134 +5,214 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Craftsman</title>
-    <script type="module" crossorigin src="/CRAFTsMAN/assets/main-3f035bb2.js"></script>
-    <link rel="stylesheet" href="/CRAFTsMAN/assets/main-2f6fd7af.css">
+    <script type="module" crossorigin src="/CRAFTsMAN/assets/main-b7bbf00e.js"></script>
+    <link rel="stylesheet" href="/CRAFTsMAN/assets/main-e860ce69.css">
   </head>
   <body>
     <div class="Product">
       
 <nav class="nav">
     <div class="container">
+        <!-- 手機版下拉選單 -->
+        <div class="menu-sm">
+            <a href="javascript:;" class="ham-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            <div class="full-menu">
+                <div class="d-flex justify-between mb-4">
+                    <a href="javadcript:;" class="arrow-back">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                            </span>
+                    </a>
+                    <a href="CheckOut-1.html">
+                        <span class="material-symbols-outlined" id="cart-icon">
+                        shopping_cart
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-group">
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Product</span>
+                            <span class="material-symbols-outlined arrow-turn">
+                                expand_more
+                                </span>
+                        </a>
+                        <ul class="text-gray">
+                            <li class="mb-2">
+                                <a href="Product.html">ALL<sub>24</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">BOWL<sub>10</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">CUP<sub>8</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">PLATE<sub>3</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">VASE<sub>3</sub></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- logo -->
         <a href="index.html" class="logo">
             <h1>Craftsman</h1>
         </a>
-        <ul>
+        <ul class="menu-l">
             <li><a href="Product.html">Product</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="javascript:;"><span class="material-symbols-outlined" id="cart-icon">
+            <li><a href="CheckOut-1.html"><span class="material-symbols-outlined" id="cart-icon">
                 shopping_cart
                 </span></a></li>
         </ul>
     </div>
-</nav>    </div>
+</nav>
 
-    <div class="product-nav text-l text-gray">
-      <ul class="product-nav-list container">
-        <li><a href="javacript:;" class="active">ALL<sup>24</sup></a></li>
-        <li><a href="javacript:;">BOWL<sup>10</sup></a></li>
-        <li><a href="javacript:;">CUP<sup>8</sup></a></li>
-        <li><a href="javacript:;">PLATE<sup>3</sup></a></li>
-        <li><a href="javacript:;">VASE<sup>3</sup></a></li>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.full-menu').hide();
+        $('.ham-icon ,.arrow-back').click(function(event){
+            $('.full-menu').toggle();
+        });
+
+        $('.drop-down-menu > ul').hide();
+        $('.drop-down-menu > a').click(function(event){
+            $('.arrow-turn').toggleClass('active');
+            $('.drop-down-menu > ul').slideToggle(800);
+        });
+
+    });
+</script>
+      <div class="product-nav text-l text-gray text-Mob-16">
+        <ul class="product-nav-list container">
+          <li><a href="javacript:;" class="active">ALL<sup>24</sup></a></li>
+          <li><a href="javacript:;">BOWL<sup>10</sup></a></li>
+          <li><a href="javacript:;">CUP<sup>8</sup></a></li>
+          <li><a href="javacript:;">PLATE<sup>3</sup></a></li>
+          <li><a href="javacript:;">VASE<sup>3</sup></a></li>
+        </ul>
+      </div>
+  
+      <ul class="Product-list container mb-9 mb-Mob-3">
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350/" alt="產品圖1" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Tatami Cup</div>
+                <div class="text-Mob-sm">NT$1,080<del class="text-gray-light">NT$1,200</del></div>
+              </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350x240/" alt="產品圖2" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Limdae Cup</div>
+                <div class="text-Mob-sm">NT$2,400</div>
+              </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350x480/" alt="產品圖3" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Kabi Mug</div>
+                <div class="text-Mob-sm">NT$980</div>
+              </div>
+          </a>
+        </li>
+        <!-- 第二排 -->
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350x480/" alt="產品圖4" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Hana Vase</div>
+                <div class="text-Mob-sm">NT$3,600<del class="text-gray-light">NT$3,880</del></div>
+              </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350/" alt="產品圖5" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Sumo Vase</div>
+                <div class="text-Mob-sm">NT$4,800</div>
+              </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350x240/" alt="產品圖6" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Shiro Plate</div>
+                <div class="text-Mob-sm">NT$1,200</div>
+              </div>
+          </a>
+        </li>
+        <!-- 第三排 -->
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350x240/" alt="產品圖7" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Baifan Bowl</div>
+                <div class="text-Mob-sm">NT$1,800<del class="text-gray-light">NT$1,980</del></div>
+              </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350x480/" alt="產品圖8" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Ceramic Vase</div>
+                <div class="text-Mob-sm">NT$3,600</div>
+              </div>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="Product-Show.html">
+            <img src="https://fakeimg.pl/350/" alt="產品圖9" class="mb-1">
+              <div class="info">
+                <div class="text-l fw-bold mb-1-sm">Couple Collection</div>
+                <div class="text-Mob-sm">NT$2,800</div>
+              </div>
+          </a>
+        </li>
+      </ul>
+  
+      <ul class="pagination text-l">
+        <li><a href="javacript:;" class="active">1</a></li>
+        <li><a href="javacript:;">2</a></li>
+        <li><a href="javacript:;">3</a></li>
       </ul>
     </div>
 
-    <ul class="Product-list container mb-9">
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350/" alt="產品圖1" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Tatami Cup</div>
-              <div class="price">NT$1,080<del class="text-gray-light">NT$1,200</del></div>
-            </div>
-        </a>
-      </li>
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350x240/" alt="產品圖2" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Limdae Cup</div>
-              <div class="price">NT$2,400</div>
-            </div>
-        </a>
-      </li>
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350x480/" alt="產品圖3" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Kabi Mug</div>
-              <div class="price">NT$980</div>
-            </div>
-        </a>
-      </li>
-      <!-- 第二排 -->
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350x480/" alt="產品圖4" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Hana Vase</div>
-              <div class="price">NT$3,600<del class="text-gray-light">NT$3,880</del></div>
-            </div>
-        </a>
-      </li>
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350/" alt="產品圖5" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Sumo Vase</div>
-              <div class="price">NT$4,800</div>
-            </div>
-        </a>
-      </li>
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350x240/" alt="產品圖6" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Shiro Plate</div>
-              <div class="price">NT$1,200</div>
-            </div>
-        </a>
-      </li>
-      <!-- 第三排 -->
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350x240/" alt="產品圖7" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Baifan Bowl</div>
-              <div class="price">NT$1,800<del class="text-gray-light">NT$1,980</del></div>
-            </div>
-        </a>
-      </li>
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350x480/" alt="產品圖8" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Ceramic Vase</div>
-              <div class="price">NT$3,600</div>
-            </div>
-        </a>
-      </li>
-      <li class="list-item">
-        <a href="Product-Show.html">
-          <img src="https://fakeimg.pl/350/" alt="產品圖9" class="mb-1">
-            <div class="info">
-              <div class="text-l fw-bold mb-1-sm">Couple Collection</div>
-              <div class="price">NT$2,800</div>
-            </div>
-        </a>
-      </li>
-    </ul>
-
-    <ul class="pagination text-l">
-      <li><a href="javacript:;" class="active">1</a></li>
-      <li><a href="javacript:;">2</a></li>
-      <li><a href="javacript:;">3</a></li>
-    </ul>
 
     <footer class="footer">
     <div class="container">
         <div class="Subscribe">
-            <div class="text-xxl fw-bold text-white mb-6">Subscribe for news and special offers!</div>
+            <div class="text-xxl fw-bold text-white mb-6 mb-Mob-3 text-Mob-xl">Subscribe for news and special offers!</div>
             <div class="d-flex">
                 <input type="email" placeholder="Your email address">
                 <input type="submit" name="submit" value="Subscribe" class="btn-primary">
