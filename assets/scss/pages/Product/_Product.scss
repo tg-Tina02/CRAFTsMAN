@@ -1,9 +1,3 @@
-.Product{
-    .nav li:first-of-type{
-        font-weight: bold;
-        color: $primary;
-    }
-}
 .product-nav{
     background: $gray-white;
 }
@@ -11,10 +5,19 @@
     display: flex;
     gap: 50px;
     padding: 24px 0;
+    @include Mobile(){
+        padding: 16px 15px;
+        gap: 0px;
+        justify-content: space-between;
+    }
     sup{
         font-size: 14px;
         position: relative;
         bottom: 10px;
+        @include Mobile(){
+            font-size: 8px;
+            bottom: 3px;
+        }
     }
     .active{
         font-weight: bold;
@@ -29,9 +32,33 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
+    @include Mobile(){
+        flex-direction: row;
+        height: auto;
+        gap: 8px;
+        .list-item{
+            width: calc((100% - 8px)/2);
+            margin-bottom: 24px;
+            &:last-child{
+                display: none;
+            }
+        }
+    }
+    img{
+        border-radius: 2px;
+        @include Mobile(){
+            height: calc((100vw - 38px)/2);
+            width: 100%;
+        }
+    }
 
     del{
         margin-left: 8px;
+    }
+    .info>:first-child{
+        @include Mobile(){
+            font-size: 20px;
+        }
     }
 }
 .pagination{

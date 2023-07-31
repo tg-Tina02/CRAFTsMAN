@@ -1,16 +1,29 @@
 .index{
   .product{
     padding: 72px 0;
+    @include Mobile(){
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-left: 15px;
+    }
     .product-list{
       background: orange;
       margin-right: -85px;
       display: flex;
       gap: 30px;
-
       overflow: hidden;
+
+      @include Mobile(){
+        margin: 0;
+        gap: 16px;
+      }
     }
     .list-item{
       flex-shrink: 0;
+      // width: 350px;
+      @include Mobile(){
+        width: 240px;
+      }
     }
     del{
       margin-left: 8px;

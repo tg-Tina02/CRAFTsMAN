@@ -1,14 +1,26 @@
 .footer{
   background-image: url("https://fakeimg.pl/1280x400/3C3C3C/?retina=1&text=背景圖&font=noto");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  padding: 84px 0;
+  height: 400px;
+  @include Mobile(){
+    height: 224px;
+  }
+  .container{
+    height: 100%;
+  }
 }
 .Subscribe{
-  width: 446px;
+  width: 40%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  @include Mobile(){
+    width: 100%;
+  }
   input{
-    display: block;
     border: none;
+    color: $gray-white;
   }
   input[type="email"]{
     flex-grow: 1;
@@ -31,6 +43,9 @@
 .footer-nav{
   background: $Black;
   padding: 32px 0;
+  @include Mobile(){
+    padding: 24px 0;
+  }
   .logo{
     margin-right: 16px;
   }
@@ -39,5 +54,20 @@
     gap: 48px;
     color: #ffffffde;
     margin-left: auto;
+    @include Mobile(){
+      flex-direction: column;
+      gap: 16px;
+      margin-left: 0;
+    }
+  }
+  .container{
+    @include Mobile(){
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 48px;
+      p{
+        order: 1;
+      }
+    }
   }
 }

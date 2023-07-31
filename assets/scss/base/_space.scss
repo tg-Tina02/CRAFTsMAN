@@ -30,6 +30,20 @@
 .mb-9{
     margin-bottom: 72px;
 }
+@include Mobile(){
+    .mb-Mob-1{
+        margin-bottom: 8px;
+    }
+    .mb-Mob-2{
+        margin-bottom: 16px;
+    }
+    .mb-Mob-3{
+        margin-bottom: 24px;
+    }
+    .mb-Mob-6{
+        margin-bottom: 48px;
+    }
+}
 
 .mt-auto{
     margin-top: auto;
@@ -51,10 +65,20 @@
 .w-100{
     width: 100%;
 }
+@include Mobile(){
+    .w-Mob-100{
+        width: 100%;
+    }
+}
 .gap-8{
     gap: 8px;
     flex-wrap: nowrap;
 }
 .gap-30{
     gap: 30px;
+}
+@include Mobile(){
+    .flex-Mob-wrap{
+        flex-wrap: wrap;
+    }
 }

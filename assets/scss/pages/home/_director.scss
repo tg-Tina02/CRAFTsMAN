@@ -5,19 +5,33 @@
     background-position: center;
     // background-repeat: no-repeat;
     height: 400px;
+    @include Mobile(){
+      background-size: cover;
+    }
 
     .container{
       height: 100%;
+      @include Mobile(){
+        flex-direction: column;
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
     }
 
     .word{
       width: 350px;
       align-items: center;
+      @include Mobile(){
+        width: 330px;
+      }
     }
 
     .info{
       width: 183px;
       justify-content: space-between;
+      @include Mobile(){
+        width: 100%;
+      }
     }
     .link{
       li{

@@ -1,16 +1,95 @@
 
 <nav class="nav">
     <div class="container">
+        <!-- 手機版下拉選單 -->
+        <div class="menu-sm">
+            <a href="javascript:;" class="ham-icon">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+            </a>
+            <div class="full-menu">
+                <div class="d-flex justify-between mb-4">
+                    <a href="javadcript:;" class="arrow-back">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                            </span>
+                    </a>
+                    <a href="CheckOut-1.html">
+                        <span class="material-symbols-outlined" id="cart-icon">
+                        shopping_cart
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-group">
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Product</span>
+                            <span class="material-symbols-outlined arrow-turn">
+                                expand_more
+                                </span>
+                        </a>
+                        <ul class="text-gray">
+                            <li class="mb-2">
+                                <a href="Product.html">ALL<sub>24</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">BOWL<sub>10</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">CUP<sub>8</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">PLATE<sub>3</sub></a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="javascript:;">VASE<sub>3</sub></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="drop-down-menu">
+                        <a href="javascript:;" class="text-l d-flex justify-between">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- logo -->
         <a href="index.html" class="logo">
             <h1>Craftsman</h1>
         </a>
-        <ul>
+        <ul class="menu-l">
             <li><a href="Product.html">Product</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="javascript:;"><span class="material-symbols-outlined" id="cart-icon">
+            <li><a href="CheckOut-1.html"><span class="material-symbols-outlined" id="cart-icon">
                 shopping_cart
                 </span></a></li>
         </ul>
     </div>
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.full-menu').hide();
+        $('.ham-icon ,.arrow-back').click(function(event){
+            $('.full-menu').toggle();
+        });
+
+        $('.drop-down-menu > ul').hide();
+        $('.drop-down-menu > a').click(function(event){
+            $('.arrow-turn').toggleClass('active');
+            $('.drop-down-menu > ul').slideToggle(800);
+        });
+
+    });
+</script>

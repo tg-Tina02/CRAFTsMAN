@@ -1,13 +1,35 @@
 .Product-Show{
     position: relative;
+    &.container{
+        @include Mobile(){
+            padding: 0;
+        }
+    }
     .content{
         width: 730px;
+        @include Mobile(){
+            width: 100%;
+            img{
+                height: 360px;
+            }
+        }
         .text{
+            display: flex;
             gap: 30px;
+            @include Mobile(){
+                padding: 0 15px;
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 120px;
+            }
         }
         p{
             font-size: 20px;
             width: 60%;
+            @include Mobile(){
+                font-size: 16px;
+                width: 100%;
+            }
         }
     }
     .product-add{
@@ -20,10 +42,14 @@
         padding: 32px;
         padding-right: 0;
         width: 445px;
-
-        .price{
-            text-align: right;
+        
+        @include Mobile(){
+            width:calc(100vw - 30px);
+            top: 386px;
+            padding: 16px;
+            right: 15px;
         }
+
         .Num{
             background: $gray-white;
             border-radius: 4px;
@@ -38,14 +64,28 @@
                 }
             }
         }
+        .price{
+            @include Mobile(){
+                position: absolute;
+                top: 115px;
+                right: 16px;
+            }
+        }
     }
     .btn-group{
         display: flex;
         gap: 8px;
+        @include Mobile(){
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     
     .btn-primary{
         flex-grow: 1;
+        @include Mobile(){
+            width: 100%;
+        }
     }
 }
 
@@ -55,7 +95,14 @@
     margin-right: -85px;
     overflow: hidden;
     background: orange;
+    @include Mobile(){
+        gap: 16px;
+        margin-right: -15px;
+    }
     .list-item{
         flex-shrink: 0;
+        @include Mobile(){
+            width: 240px;
+        }
     }
 }

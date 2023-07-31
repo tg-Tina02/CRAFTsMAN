@@ -16,7 +16,23 @@
 .text-xxl{
     font-size: 48px;
 }
-
+@include Mobile(){
+    .text-Mob-sm{
+        font-size: 14px;
+    }
+    .text-Mob-16{
+        font-size: 16px;
+    }
+    .text-Mob-l{
+        font-size: 24px;
+    }
+    .text-Mob-xl{
+        font-size: 32px;
+    }
+    .text-Mob-xxl{
+        font-size: 48px;
+    }
+}
 
 // 文字顏色
 .text-white{
@@ -37,10 +53,26 @@
 .text-primary{
     color: $primary;
 }
+@include Mobile(){
+    .text-Mob-white{
+        color: #fff;
+    }
+    .text-Mob-white-light{
+        color: #ffffff99;
+    }
+}
 
 // 字靠右
 .text-right{
     text-align: right;
+}
+@include Mobile(){
+    .text-Mob-center{
+        text-align: center;
+    }
+    .text-Mob-left{
+        text-align: left;
+    }
 }
 
 // 字重

@@ -1,19 +1,48 @@
 .index{
   .nav{
     color: #fff;
+    @include Mobile(){
+      .logo{
+        color: #fff;
+      }
+    }
   }
   .header{
     margin-right: -85px;
     margin-top: -77px;
     height: 800px;
-    background-image: url("https://fakeimg.pl/620x800/");
+    background-image: url("https://fakeimg.pl/620x800/3C3C3C/");
     background-repeat: no-repeat;
     background-position: right top;
+
+    @include Mobile(){
+      padding: 15px;
+      margin: 0;
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+    }
+
     .text{
       width: 39%;
       position: relative;
-      top: 400px;
+      top: 50%;
       transform: translateY(-50%);
+      @include Mobile(){
+        width: 100%;
+      }
+    }
+    .btn-primary{
+      @include Mobile(){
+        width: 100%;
+        position: absolute;
+        top: 60vh;
+      }
     }
   }
 }

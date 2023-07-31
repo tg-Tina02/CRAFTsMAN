@@ -3,15 +3,23 @@
         ul{
             display: none;
         }
+        .menu-sm{
+            display: none;
+        }
+        @include Mobile(){
+            .logo{
+                color: #fff;
+            }
+        }
     }
     .container{
         position: relative;
     }
     .info{
-        background-image: url("https://fakeimg.pl/625x800/");
+        background-image: url("https://fakeimg.pl/625x800/3C3C3C/");
         background-repeat: no-repeat;
         background-position: top right;
-        // background-size: contain;
+        background-size: contain;
         
         position: absolute;
         height: 100vh;
@@ -19,14 +27,29 @@
         right: -85px;
         left: 0;
         z-index: -1;
+        @include Mobile(){
+            top: -61px;
+            right: 0;
+            background-size: cover;
+            background-position: center;
+        }
     }
     .text{
         width: 445px;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
+        @include Mobile(){
+            width: 100%;
+            padding: 15px;
+        }
     }
     .btn-primary{
         padding:19px 57px 18px;
+        @include Mobile(){
+            width: 100%;
+            position: relative;
+            top: 152px;
+        }
     }
 }

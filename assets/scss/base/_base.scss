@@ -27,9 +27,9 @@ img{
     // @include Pad(){
     //     padding: 0 36px;
     //   }
-    // @include Mobile(){
-    //     padding: 0 12px;
-    //   }
+    @include Mobile(){
+        padding: 0 15px;
+      }
 }
 
 .logo{

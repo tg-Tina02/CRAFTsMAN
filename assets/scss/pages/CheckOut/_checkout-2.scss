@@ -11,6 +11,9 @@
         }
         input:only-of-type{
             padding-left: 95px;
+            @include Mobile(){
+                padding-right: 55px;
+            }
             &::placeholder{
                 font-size: 14px;
                 line-height: 24px;

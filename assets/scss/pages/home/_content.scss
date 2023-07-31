@@ -1,17 +1,32 @@
 .index{
   .content{
     padding: 72px 0;
+    
+    @include Mobile(){
+      margin-top: calc(100vh - 60px);
+      padding-top: 48px;
+    }
     li{
       display: flex;
       gap: 30px;
       align-items: center;
-    }
-    img{
-      display: block;
+      &:nth-of-type(2n){
+        flex-direction: row-reverse;
+      }
+      @include Mobile(){
+        flex-direction: column;
+        gap: 16px;
+        &:nth-of-type(2n){
+          flex-direction: column;
+        }
+      }
     }
     .text{
       width: 32%;
       margin: auto;
+      @include Mobile(){
+        width: 100%;
+      }
     }
   }
 }

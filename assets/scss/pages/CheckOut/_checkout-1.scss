@@ -3,14 +3,28 @@
         ul{
             display: none;
         }
+        .menu-sm{
+            display: none;
+        }
     }
     .container{
-        width: 920px;
+        max-width: 920px;
+    }
+    &>.container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .check-out-nav{
+        width: 100%;
     }
 
     // 表格區塊
     .form{
-        flex-grow: 2;
+        width: 58%;
+        @include Mobile(){
+            width: 100%;
+        }
     }
     label{
         display: block;
@@ -29,6 +43,11 @@
     input:focus-within{
         background: $gray-white;
     }
+    .back{
+        @include Mobile(){
+            text-align: center;
+        }
+    }
     .back:hover{
         .material-symbols-outlined{
             padding-left: 0px;
@@ -41,23 +60,41 @@
         padding: 4px;
         transition: all 0.4s;
     }
+    .btn-primary{
+        width: calc(50% - 8px);
+        @include Mobile(){
+            width: 100%;
+            order: -1;
+            margin-bottom: 27px;
+        }
+    }
     .form-footer{
         gap: 24px;
         padding-top: 8px;
         border-top: 1px solid $gray-light;
         margin-bottom: 160px;
+        @include Mobile(){
+            padding: 16px 0;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 0;
+        }
     }
 
     // 右半部
     .total-Price-aside{
-        flex-grow: 1;
+        width: 38%;
         padding: 32px;
         background: $gray-white;
         height: fit-content;
         border-radius: 2px;
-
         img{
             margin-right: 16px;
+        }
+        @include Mobile(){
+            order: -1;
+            width: 100%;
+            padding: 16px;
         }
     }
     .subtotal{
@@ -68,7 +105,25 @@
     .total{
         padding-top: 16px;
     }
-    .btn-primary{
-        width: calc(50% - 8px);
+    .cart-drop-down-btn{
+        display: none;
+        @include Mobile(){
+            display: block;
+            display: flex;
+            justify-content: space-between;
+        }
+        .material-symbols-outlined{
+            font-size: 24px;
+            padding: 0;
+        }
+        .material-symbols-outlined.active{
+            transform: rotate(180deg);
+        }
+    }
+    .cart-drop-down{
+        @include Mobile(){
+            padding-top: 16px;
+            display: none;
+        }
     }
 }
